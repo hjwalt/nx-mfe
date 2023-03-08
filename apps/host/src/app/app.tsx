@@ -4,6 +4,8 @@ import NxWelcome from './nx-welcome';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
+import { Ui } from '@nx-mfe/ui';
+
 const Shop = React.lazy(() => import('shop/Module'));
 
 const Cart = React.lazy(() => import('cart/Module'));
@@ -30,6 +32,7 @@ export function App() {
           <Link to="/about">About</Link>
         </li>
       </ul>
+      <Ui></Ui>
       <Routes>
         <Route path="/" element={<NxWelcome title="host" />} />
 
