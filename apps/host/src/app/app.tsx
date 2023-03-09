@@ -10,8 +10,6 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import { Ui } from '@nx-mfe/ui';
-
 import LinkItem from './link/link';
 import Dashboard from './dashboard/dashboard';
 
@@ -43,15 +41,12 @@ export function App() {
           </>
         }
         body={
-          <>
-            <Ui></Ui>
-            <Routes>
-              <Route path="/" element={<NxWelcome title="host" />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </>
+          <Routes>
+            <Route path="/" element={<NxWelcome title="host" />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
         }
       />
     </React.Suspense>

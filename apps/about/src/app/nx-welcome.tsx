@@ -1,3 +1,5 @@
+import { Welcome } from "@nx-mfe/ui";
+
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  This is a starter component and can be deleted.
@@ -418,8 +420,10 @@ export function NxWelcome({ title }: { title: string }) {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome {title} 👋
             </h1>
+            <Welcome>
+              <>Welcome {title} 👋</>
+            </Welcome>
           </div>
 
           <div id="hero" className="rounded">

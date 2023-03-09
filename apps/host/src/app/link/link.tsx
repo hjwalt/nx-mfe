@@ -15,14 +15,12 @@ export interface LinkProps {
 
 export function Link(props: LinkProps) {
   return (
-    <ListItemButton>
-      <ListItemIcon>
-        {props.icon}
-      </ListItemIcon>
-      <RouteLink to={props.to}>
+    <RouteLink to={props.to}>
+      <ListItemButton>
+        <ListItemIcon>{props.icon}</ListItemIcon>
         <ListItemText primary={props.children} />
-      </RouteLink>
-    </ListItemButton>
+      </ListItemButton>
+    </RouteLink>
   );
 }
 

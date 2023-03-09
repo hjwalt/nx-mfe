@@ -5,6 +5,9 @@
  Delete this file and get started with your project!
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
+
+import { Welcome } from '@nx-mfe/ui';
+
 export function NxWelcome({ title }: { title: string }) {
   return (
     <>
@@ -416,9 +419,11 @@ export function NxWelcome({ title }: { title: string }) {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
+            <Welcome>
+              <>Welcome {title} 👋</>
+            </Welcome>
             <h1>
               <span> Hello there, </span>
-              Welcome {title} 👋
             </h1>
           </div>
 
