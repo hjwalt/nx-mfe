@@ -47,7 +47,7 @@ export function App() {
         body={
           <Routes>
             <Route path="/" element={<NxWelcome title="host" />} />
-            <Route path="/scheduling" element={<Scheduling />} />
+            <Route path="/scheduling" element={<Scheduling title="another" />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />

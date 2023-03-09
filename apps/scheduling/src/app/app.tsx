@@ -3,10 +3,14 @@ import styles from './app.module.css';
 
 import NxWelcome from './nx-welcome';
 
-export function App() {
+export interface AppProps {
+  title: string;
+}
+
+export function App(props: AppProps) {
   return (
     <>
-      <NxWelcome title="scheduling" />
+      <NxWelcome title={props.title} />
 
       <div />
     </>
