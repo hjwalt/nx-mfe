@@ -18,6 +18,7 @@ import NxWelcome from './nx-welcome';
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
 const About = React.lazy(() => import('about/Module'));
+const Scheduling = React.lazy(() => import('scheduling/Module'));
 
 export function App() {
   return (
@@ -38,14 +39,19 @@ export function App() {
             <LinkItem to="/about" icon={<DashboardIcon />}>
               About
             </LinkItem>
+            <LinkItem to="/scheduling" icon={<DashboardIcon />}>
+              Scheduling
+            </LinkItem>
           </>
         }
         body={
           <Routes>
             <Route path="/" element={<NxWelcome title="host" />} />
+            <Route path="/scheduling" element={<Scheduling />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
+            <Route path="/scheduling" element={<Scheduling />} />
           </Routes>
         }
       />
