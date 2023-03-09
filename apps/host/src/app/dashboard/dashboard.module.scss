@@ -1,0 +1,15 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.drawer {
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: width 0.5s;
+  transition-timing-function: ease;
+  overflow-x: hidden;
+}
