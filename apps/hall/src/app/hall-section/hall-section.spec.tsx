@@ -7,27 +7,26 @@ import HallSection from './hall-section';
 export interface HallSectionTestComponentProps {}
 
 function HallSectionTestComponent(props: HallSectionTestComponentProps) {
-  const [seatState, setSeatState] = React.useState(new Map<string, boolean>());
-
   return (
     <HallSection
-      hallStatus={seatState}
-      setHallStatus={setSeatState}
+      zone="A"
       section={{
-        sectionNumber: 1,
+        id: 1,
+        firstSeatNumber: 1,
+        lastSeatNumber: 20,
         rows: [
           {
-            rowNumber: 1,
+            id: 1,
             leftOffset: 0,
             seatCount: 20,
           },
           {
-            rowNumber: 2,
+            id: 2,
             leftOffset: 1,
             seatCount: 19,
           },
           {
-            rowNumber: 3,
+            id: 3,
             leftOffset: 0,
             seatCount: 20,
           },
