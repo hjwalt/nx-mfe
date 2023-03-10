@@ -2,8 +2,9 @@ import * as React from 'react';
 
 import Box from '@mui/material/Box';
 
-import { HallSection as HallSectionModel } from '@nx-mfe/domain';
-import { HallSection } from '@nx-mfe/ui';
+import { HallSection as HallSectionModel } from '../domain/hall';
+import HallSection from '../hall-section/hall-section';
+
 
 const exampleSection: HallSectionModel = {
   sectionNumber: 1,

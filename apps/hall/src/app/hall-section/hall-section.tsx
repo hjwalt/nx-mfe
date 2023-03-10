@@ -1,7 +1,7 @@
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 
-import { HallSection as HallSectionModel } from '@nx-mfe/domain';
+import { HallSection as HallSectionModel } from '../domain/hall';
 import HallSectionRow from '../hall-section-row/hall-section-row';
 import { Typography } from '@mui/material';
 
@@ -31,7 +31,7 @@ export function HallSection(props: HallSectionProps) {
       }}
       variant="outlined"
     >
-      <Typography variant='h5'>Section</Typography>
+      <Typography variant='h5'>test 2</Typography>
       <Box
         sx={{
           p: 2,

@@ -1,7 +1,8 @@
 import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 
-import { HallSectionRow as HallSectionRowModel } from '@nx-mfe/domain';
+import { HallSectionRow as HallSectionRowModel } from '../domain/hall';
+import { useTheme } from '@mui/material';
 
 export interface HallSectionRowProps {
   hallStatus: Map<string, boolean>;
@@ -10,13 +11,15 @@ export interface HallSectionRowProps {
 }
 
 export function HallSectionRow(props: HallSectionRowProps) {
+  const theme = useTheme();
+
   const checkboxes: JSX.Element[] = [];
   for (let i = 0; i < props.row.leftOffset; i++) {
     checkboxes.push(
       <Box
         key={`offset-${i}`}
         sx={{
-          height: '2rem',
+          height: theme.spacing(4),
           width: '2rem',
           m: 0,
           p: 0,
@@ -38,11 +41,11 @@ export function HallSectionRow(props: HallSectionRowProps) {
         size="small"
         sx={{
           display: 'block',
-          height: '2rem',
-          width: '2rem',
-          p: '0.5rem',
+          height: theme.spacing(8),
+          width: theme.spacing(8),
+          p: theme.spacing(2),
           '& .MuiSvgIcon-root': {
-            fontSize: '1rem',
+            fontSize: theme.spacing(4),
             lineHeight: '1',
           },
         }}

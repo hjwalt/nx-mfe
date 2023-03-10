@@ -13,10 +13,8 @@ import '@fontsource/roboto/700.css';
 import LinkItem from './sidebar-link/link';
 import Dashboard from './dashboard/dashboard';
 
-import PageHome from './page-home/page-home';
-
+const Hall = React.lazy(() => import('hall/Module'));
 const Shop = React.lazy(() => import('shop/Module'));
-const Cart = React.lazy(() => import('cart/Module'));
 const About = React.lazy(() => import('about/Module'));
 const Scheduling = React.lazy(() => import('scheduling/Module'));
 
@@ -33,9 +31,6 @@ export function App() {
               Shop
             </LinkItem>
             <Divider />
-            <LinkItem to="/cart" icon={<DashboardIcon />}>
-              Cart
-            </LinkItem>
             <LinkItem to="/about" icon={<DashboardIcon />}>
               About
             </LinkItem>
@@ -46,13 +41,13 @@ export function App() {
         }
         body={
           <Routes>
-            <Route path="/" element={<PageHome />} />
+            <Route path="/" element={<Hall />} />
+            <Route path="/hall" element={<Hall />} />
             <Route
               path="/scheduling"
               element={<Scheduling title="another" />}
             />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
             <Route path="/scheduling" element={<Scheduling />} />
           </Routes>

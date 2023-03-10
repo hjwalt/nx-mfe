@@ -1,12 +1,14 @@
 import * as React from 'react';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+
+import { theme } from '@nx-mfe/ui';
 
 import TopBarIconButton from '../top-bar-icon-button/top-bar-icon-button';
 import TopBar from '../top-bar/top-bar';
@@ -16,10 +18,6 @@ export interface DashboardProps {
   route: JSX.Element;
   body: JSX.Element;
 }
-
-const theme = createTheme({
-  spacing: (factor: number) => `${0.25 * factor}rem`, // (Bootstrap strategy)
-});
 
 export function Dashboard(props: DashboardProps) {
   const [open, setOpen] = React.useState(true);

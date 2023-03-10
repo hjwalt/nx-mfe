@@ -17,6 +17,7 @@ export function Welcome(props: WelcomeProps) {
         flexGrow: 1,
       }}
     >
+      test
       {props.children}
     </Typography>
   );
