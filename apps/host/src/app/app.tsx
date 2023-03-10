@@ -10,10 +10,10 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import LinkItem from './link/link';
+import LinkItem from './sidebar-link/link';
 import Dashboard from './dashboard/dashboard';
 
-import NxWelcome from './nx-welcome';
+import PageHome from './page-home/page-home';
 
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
@@ -32,7 +32,7 @@ export function App() {
             <LinkItem to="/shop" icon={<DashboardIcon />}>
               Shop
             </LinkItem>
-            <Divider sx={{ my: 1 }} />
+            <Divider />
             <LinkItem to="/cart" icon={<DashboardIcon />}>
               Cart
             </LinkItem>
@@ -46,8 +46,11 @@ export function App() {
         }
         body={
           <Routes>
-            <Route path="/" element={<NxWelcome title="host" />} />
-            <Route path="/scheduling" element={<Scheduling title="another" />} />
+            <Route path="/" element={<PageHome />} />
+            <Route
+              path="/scheduling"
+              element={<Scheduling title="another" />}
+            />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
